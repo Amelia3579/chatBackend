@@ -36,8 +36,8 @@ socket.on("logMessages", (data) => {
   const log = document.getElementById("logMessages");
   let messages = "";
 
-  data.forEach((element) => {
-    messages = messages + `${element.user} dice: ${element.message}`;
+  data.forEach((message) => {
+    messages = messages + `${message.user} dice: ${message.message}`;
   });
   log.innerHTML = messages;
 });
